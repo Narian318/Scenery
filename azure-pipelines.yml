@@ -20,7 +20,9 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: nn-self
+      name: nn-self
+      demands:
+        - agent.name -equals naren-agent
     steps:
 
     - task: Docker@2
