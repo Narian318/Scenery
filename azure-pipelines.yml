@@ -19,7 +19,6 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
-      agent: naren-self
     steps:
 
     - task: Docker@2
