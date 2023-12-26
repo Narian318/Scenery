@@ -19,10 +19,12 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
+      agent: naren-self
     steps:
+
     - task: Docker@2
       inputs:
         containerRegistry: 'docker'
-        repository: 'narian/scenery'
+        repository: 'narian318/scenery'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
